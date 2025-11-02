@@ -1,19 +1,7 @@
 Below is the **paragraph-style README** with **image descriptions placed immediately after each image**. You can paste directly into `README.md`:
 
 ---
-
-This project implements a complete RTL-to-GDSII physical design flow for the open-source cv32e40p RISC-V processor core using professional Synopsys EDA tools. The goal is to transform Verilog RTL into a manufacturable GDSII layout following industry-standard VLSI backend methodologies.
-
-Starting from RTL, the design is synthesized using Design Compiler to generate a gate-level netlist optimized for area, power, and timing. Static timing constraints (SDC) are applied to ensure proper frequency targets and design integrity before entering the physical design environment.
-
-The physical design flow is realized in IC Compiler II (ICC2), beginning with floorplanning to define the core boundaries, routing channels, and I/O ring. A robust Power Delivery Network (PDN) is implemented using core rings and metal straps to guarantee stable power distribution across the chip.
-
-Next, standard cells are placed using global and detailed placement, achieving balanced cell distribution and routability without congestion hotspots. Clock Tree Synthesis (CTS) is performed to create a low-skew clock network with balanced insertion delay. Following CTS, detailed routing connects all signals while resolving DRC violations and optimizing wire geometry.
-
-Post-route optimization, extraction, and PrimeTime STA ensure setup and hold timing closure. Parasitic files (SPEF/SDF) are generated for accurate timing and signal integrity analysis. The flow concludes with the generation of final GDSII, DEF, and sign-off reports, representing a complete tape-out-ready ASIC layout.
-
-This project demonstrates hands-on experience with key digital backend processes including timing closure, congestion debugging, routing optimization, and sign-off methodologies, offering valuable real-world VLSI implementation knowledge.
----
+This project demonstrates a complete ASIC RTL-to-GDSII physical design flow for the CV32E40P RISC-V core using Synopsys industry-standard EDA tools. It implements a full production-style backend methodology including synthesis, floorplanning, power grid construction, standard-cell placement, clock-tree synthesis, routing, post-route optimization, timing closure, and final GDS export. The flow achieves legal placement, balanced clock distribution, proper power routing, congestion-aware routing, and finished chip layout suitable for tape-out. All design stages are documented and supported with screenshots capturing hierarchy inspection, floorplan quality checks, power plan integrity, placement density, pin distribution, clock tree structure, and routed database. This repository serves as a practical learning and reference platform for students and VLSI engineers working on advanced physical design flows for real CPU cores, ensuring timing, power, and physical sign-off quality aligned with industry standards.
 
 ### 📸 Flow Outputs
 
